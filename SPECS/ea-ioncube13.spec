@@ -24,13 +24,7 @@ URL:     http://www.ioncube.com/loaders.php
 Source: ioncube_loaders_lin_x86-64.tar.gz
 
 Provides:      %{parent_prefix}ioncube = 13
-Conflicts:     %{parent_prefix}ioncube >= 13, ea-ioncube < 13
 Conflicts:     %{parent_prefix}php-ioncube
-Conflicts:     %{parent_prefix}php-ioncube5
-Conflicts:     %{parent_prefix}php-ioncube6
-Conflicts:     %{parent_prefix}php-ioncube10
-Conflicts:     %{parent_prefix}php-ioncube11
-Conflicts:     %{parent_prefix}php-ioncube12
 
 # Don't provide extensions as shared library resources
 %{?filter_provides_in: %filter_provides_in %{php_extdir}/.*\.so$}

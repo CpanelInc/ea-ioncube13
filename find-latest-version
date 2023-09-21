@@ -4,7 +4,6 @@
 # copyright@cpanel.net                                         http://cpanel.net
 # This code is subject to the cPanel license. Unauthorized copying is prohibited
 #
-# This provides incremental updates to existing packages in EasyApache4.
 package ea_ioncube13::find_latest_version;
 
 use strict;
@@ -27,7 +26,7 @@ sub _get_required {
     my $listing_url = "https://ioncube.com/loaders.php";
     my $res         = $http->get($listing_url);
     if ( !$res->{success} ) {
-        die "Could not GET apache dist page ($res->{status} $res->{reason})\n";
+        die "Could not GET ioncube dist page ($res->{status} $res->{reason})\n";
     }
 
     my ( $version, $url ) = _scrape_page( 'Linux (64 bits)', $res->{content} );
