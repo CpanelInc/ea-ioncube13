@@ -10,7 +10,7 @@
 Name:    %{parent_prefix}php-ioncube13
 Vendor:  cPanel, Inc.
 Summary: v13 Loader for ionCube-encoded PHP files
-Version: 13.0.2
+Version: 13.0.3
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4572 for more details
 %define release_prefix 1
 Release: %{release_prefix}%{?dist}.cpanel
@@ -68,6 +68,9 @@ EOF
 %{php_extdir}/ioncube_loader_lin_%{php_version}.so
 
 %changelog
+* Tue May 14 2024 Cory McIntire <cory@cpanel.net> - 13.0.3-1
+- EA-12148: Update ea-ioncube13 from v13.0.2 to v13.0.3
+
 * Mon Sep 11 2023 Sloane Bernstein <sloane@cpanel.net> - 13.0.2-1
 - ZC-11156: Create package
 
