@@ -134,8 +134,7 @@ sub _scrape_page {
             if (@sub_children) {
                 my $text_node = $sub_children[0];
                 if ( !ref($text_node) && $text_node =~ m/(\d+\.\d+\.\d+)/ ) {
-                    # $scraped_version = $1;
-					$scraped_version = 'https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz'
+                    $scraped_version = $1;
                 }
                 if ( !$scraped_tarball && ref($text_node) && $text_node->tag() eq 'a' ) {
                     my $href = $text_node->attr('href');
